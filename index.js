@@ -1,3 +1,4 @@
+const daysDisplay = document.getElementById('days-display')
 const meter = document.getElementById('meter')
 
 function getDaysTilXmas() {
@@ -19,6 +20,8 @@ function getDaysTilXmas() {
 
   return days
 }
+
+daysDisplay.textContent = getDaysTilXmas()
 
 console.log(getDaysTilXmas())
 
