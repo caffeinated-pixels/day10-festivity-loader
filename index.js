@@ -6,7 +6,7 @@ function getDaysTilXmas() {
   const today = new Date() // get current time
 
   const christmasYear =
-    today.getMonth() === 11 && today.getDate() > 24
+    today.getMonth() === 11 && today.getDate() > 25
       ? today.getFullYear() + 1
       : today.getFullYear()
   // determine whether Christmas is this year (< Dec 25) or next year (> Dec 24)
@@ -23,7 +23,7 @@ function getDaysTilXmas() {
 }
 
 function getProgressPercentage(daysTilXmas) {
-  const percentage = (daysTilXmas / 24) * 100
+  const percentage = ((25 - daysTilXmas) / 25) * 100
   return percentage + '%'
 }
 
