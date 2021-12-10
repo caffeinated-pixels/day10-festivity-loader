@@ -3,7 +3,7 @@ const percentageDisplay = document.getElementById('percentage')
 const meterBar = document.getElementById('meter-bar')
 
 function getDaysTilXmas() {
-  const today = new Date() // get current time
+  const today = new Date('December 26, 2021') // get current time
 
   const christmasYear =
     today.getMonth() === 11 && today.getDate() > 25
@@ -30,11 +30,15 @@ function getProgressPercentage(daysTilXmas) {
 const daysTilXmas = getDaysTilXmas()
 daysDisplay.textContent = daysTilXmas
 
-const progressPercentage = getProgressPercentage(daysTilXmas)
-console.log(progressPercentage)
+if (daysTilXmas < 25) {
+  const progressPercentage = getProgressPercentage(daysTilXmas)
+  console.log(progressPercentage)
 
-meterBar.style.width = progressPercentage
-percentageDisplay.textContent = progressPercentage
+  meterBar.style.width = progressPercentage
+  percentageDisplay.textContent = progressPercentage
+} else {
+  percentageDisplay.textContent = '0%'
+}
 
 // Task:
 // Write a function to wire up the festivity loader to reflect how many days are remaining until Christmas!
