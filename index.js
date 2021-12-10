@@ -30,7 +30,7 @@ function getProgressPercentage(daysTilXmas) {
 
 function animateProgress(progressPercentage) {
   let currentPercent = 1
-  const intervalId = setInterval(animate, 10)
+  const intervalId = setInterval(animate, 25)
 
   function animate() {
     if (currentPercent >= progressPercentage) {
@@ -48,7 +48,7 @@ daysDisplay.textContent = daysTilXmas
 
 if (daysTilXmas < 25) {
   const progressPercentage = getProgressPercentage(daysTilXmas)
-  animateProgress(progressPercentage)
+  animateProgress(progressPercentage, daysTilXmas)
 
   if (daysTilXmas === 0) {
     statusMsg.textContent = `Loading complete!`
