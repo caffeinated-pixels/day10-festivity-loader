@@ -1,5 +1,6 @@
 const daysDisplay = document.getElementById('days-display')
-const meter = document.getElementById('meter')
+const percentageDisplay = document.getElementById('percentage')
+const meterBar = document.getElementById('meter-bar')
 
 function getDaysTilXmas() {
   const today = new Date() // get current time
@@ -21,9 +22,19 @@ function getDaysTilXmas() {
   return days
 }
 
-daysDisplay.textContent = getDaysTilXmas()
+function getProgressPercentage(daysTilXmas) {
+  const percentage = (daysTilXmas / 24) * 100
+  return percentage + '%'
+}
 
-console.log(getDaysTilXmas())
+const daysTilXmas = getDaysTilXmas()
+daysDisplay.textContent = daysTilXmas
+
+const progressPercentage = getProgressPercentage(daysTilXmas)
+console.log(progressPercentage)
+
+meterBar.style.width = progressPercentage
+percentageDisplay.textContent = progressPercentage
 
 // Task:
 // Write a function to wire up the festivity loader to reflect how many days are remaining until Christmas!

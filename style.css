@@ -16,7 +16,7 @@ body {
 h1,
 h2,
 p {
-  margin-top: 0;
+  margin: 0;
 }
 
 body {
@@ -47,6 +47,13 @@ body {
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
+.percentage {
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  margin-bottom: 0.25em;
+}
+
 .meter-track {
   height: 25px;
   position: relative;
@@ -57,9 +64,8 @@ body {
 }
 
 .meter-bar {
-  width: 100%;
+  width: 2%;
   height: 100%;
-
   border-radius: 20px;
   background-color: rgb(43, 194, 83);
   background-image: linear-gradient(
