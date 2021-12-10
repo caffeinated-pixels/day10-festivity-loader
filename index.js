@@ -25,7 +25,22 @@ function getDaysTilXmas() {
 
 function getProgressPercentage(daysTilXmas) {
   const percentage = ((25 - daysTilXmas) / 25) * 100
-  return percentage.toFixed(0) + '%'
+  return percentage.toFixed(0)
+}
+
+function animateProgress(progressPercentage) {
+  let currentPercent = 1
+  const intervalId = setInterval(animate, 10)
+
+  function animate() {
+    if (currentPercent >= progressPercentage) {
+      clearInterval(intervalId)
+    } else {
+      currentPercent++
+      percentageDisplay.textContent = currentPercent + '%'
+      meterBar.style.width = currentPercent + '%'
+    }
+  }
 }
 
 const daysTilXmas = getDaysTilXmas()
@@ -33,9 +48,8 @@ daysDisplay.textContent = daysTilXmas
 
 if (daysTilXmas < 25) {
   const progressPercentage = getProgressPercentage(daysTilXmas)
+  animateProgress(progressPercentage)
 
-  meterBar.style.width = progressPercentage
-  percentageDisplay.textContent = progressPercentage
   if (daysTilXmas === 0) {
     statusMsg.textContent = `Loading complete!`
   }
