@@ -4,7 +4,7 @@ const percentageDisplay = document.getElementById('percentage')
 const meterBar = document.getElementById('meter-bar')
 
 function getDaysTilXmas() {
-  const today = new Date('December 26, 2021') // get current time
+  const today = new Date() // get current time
 
   const christmasYear =
     today.getMonth() === 11 && today.getDate() > 25
@@ -33,10 +33,12 @@ daysDisplay.textContent = daysTilXmas
 
 if (daysTilXmas < 25) {
   const progressPercentage = getProgressPercentage(daysTilXmas)
-  console.log(progressPercentage)
 
   meterBar.style.width = progressPercentage
   percentageDisplay.textContent = progressPercentage
+  if (daysTilXmas === 0) {
+    statusMsg.textContent = `Loading complete!`
+  }
 } else {
   percentageDisplay.textContent = '0%'
   statusMsg.textContent = `Waiting for December...`
