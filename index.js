@@ -1,4 +1,5 @@
 const daysDisplay = document.getElementById('days-display')
+const statusMsg = document.getElementById('status-msg')
 const percentageDisplay = document.getElementById('percentage')
 const meterBar = document.getElementById('meter-bar')
 
@@ -38,6 +39,7 @@ if (daysTilXmas < 25) {
   percentageDisplay.textContent = progressPercentage
 } else {
   percentageDisplay.textContent = '0%'
+  statusMsg.textContent = `Waiting for December...`
 }
 
 // Task:
