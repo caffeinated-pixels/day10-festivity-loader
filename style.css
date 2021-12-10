@@ -25,14 +25,24 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: 'Mountains of Christmas', cursive;
+  font-family: 'Roboto Mono', monospace;
   text-align: center;
   color: var(--dark-green);
   background-color: var(--snow);
 }
 
+.status-msg,
+.percentage {
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: 'Mountains of Christmas', cursive;
+}
+
 .days-display {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: bold;
 }
 
@@ -49,10 +59,14 @@ body {
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
+.status-msg {
+  margin-top: 0.75em;
+  margin-bottom: 0.1em;
+  font-size: 1.5rem;
+}
 .percentage {
   font-weight: bold;
   font-size: 1.5rem;
-
   margin-bottom: 0.25em;
 }
 
