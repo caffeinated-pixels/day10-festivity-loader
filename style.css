@@ -29,6 +29,18 @@ body {
   text-align: center;
   color: var(--dark-green);
   background-color: var(--snow);
+  background-image: url('./christmas-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-opacity {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: hsla(0, 0%, 100%, 0.7);
+  z-index: -1;
 }
 
 .status-msg,
