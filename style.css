@@ -43,7 +43,7 @@ h1 {
 
 .days-display {
   font-size: 4rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .container {
@@ -65,7 +65,7 @@ h1 {
   font-size: 1.5rem;
 }
 .percentage {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 0.25em;
 }
