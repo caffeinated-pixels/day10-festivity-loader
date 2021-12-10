@@ -25,7 +25,7 @@ function getDaysTilXmas() {
 
 function getProgressPercentage(daysTilXmas) {
   const percentage = ((25 - daysTilXmas) / 25) * 100
-  return percentage + '%'
+  return percentage.toFixed(0) + '%'
 }
 
 const daysTilXmas = getDaysTilXmas()
