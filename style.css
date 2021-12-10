@@ -25,6 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-family: 'Mountains of Christmas', cursive;
   text-align: center;
   color: var(--dark-green);
   background-color: var(--snow);
@@ -32,6 +33,7 @@ body {
 
 .days-display {
   font-size: 2rem;
+  font-weight: bold;
 }
 
 .container {
